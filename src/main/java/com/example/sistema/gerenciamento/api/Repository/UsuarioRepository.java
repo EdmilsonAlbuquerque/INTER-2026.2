@@ -8,6 +8,13 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+    Optional<Usuario> findByEmailIgnoreCase(String email);
+    boolean existsByEmailIgnoreCase(String email);
+    boolean existsByPerfilAndAtivoTrue(com.example.sistema.gerenciamento.api.Entity.Perfil perfil);
+
+    @org.springframework.data.jpa.repository.Lock(jakarta.persistence.LockModeType.PESSIMISTIC_WRITE)
+    @org.springframework.data.jpa.repository.Query("select u from Usuario u where u.perfil = com.example.sistema.gerenciamento.api.Entity.Perfil.ADMINISTRADOR order by u.id")
+    List<Usuario> bloquearAdministradores();
 
     // [ GET ] - BUSCA UM USUÁRIO PELO E-MAIL EXATO
     Optional<Usuario> findByEmail(String email);

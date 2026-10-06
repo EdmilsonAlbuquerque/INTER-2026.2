@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Usuários e acessos — Instituto Manancial</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<link rel="stylesheet" href="/css/aplicacao.css"></head><body class="bg-slate-50 text-slate-800" style="font-family:Inter,sans-serif">
+<header class="bg-white border-b border-slate-100"><div class="max-w-7xl mx-auto p-5 flex flex-wrap items-center justify-between gap-4">
+<a href="/gerenciamento" class="font-bold text-blue-900">Instituto Manancial</a><nav class="flex gap-5"><a href="/gerenciamento">Gerenciamento</a><a href="/meu-perfil">Meu perfil</a></nav>
+</div></header>
+<main class="max-w-7xl mx-auto p-6 space-y-6" id="admin-panel">
+<div><h1 class="text-2xl font-bold">Usuários e acessos</h1><p class="text-sm text-slate-500 mt-2">Gerencie convites, perfis e contas da equipe.</p></div>
+<form id="convite-form" class="bg-white rounded-xl shadow-sm p-6 space-y-4">
+<h2 class="font-semibold">Convidar uma pessoa</h2><div class="grid md:grid-cols-3 gap-4">
+<label class="text-sm">E-mail do convidado (opcional)<input name="email" type="email" maxlength="150" class="mt-1 w-full rounded-lg border-slate-200"></label>
+<label class="text-sm">Perfil<select name="perfil" class="mt-1 w-full rounded-lg border-slate-200"><option value="LEITOR">Leitor</option><option value="OPERADOR">Operador</option><option value="ADMINISTRADOR">Administrador</option></select></label>
+<button type="submit" class="self-end rounded-lg bg-blue-800 text-white px-5 py-3 font-semibold">Gerar convite</button></div>
+<label class="block text-sm">Link do convite<input id="convite-link" readonly class="mt-1 w-full rounded-lg border-slate-200" placeholder="O link aparecerá aqui"></label>
+</form>
+<section class="bg-white rounded-xl shadow-sm overflow-x-auto"><table class="w-full text-sm text-left"><thead class="bg-slate-100"><tr><th class="p-4">Nome</th><th class="p-4">E-mail</th><th class="p-4">Perfil</th><th class="p-4">Ativo</th><th class="p-4">Ações</th></tr></thead><tbody id="usuarios-lista"></tbody></table></section>
+<label class="block text-sm bg-white p-6 rounded-xl">Link de redefinição de senha<input id="redefinicao-link" readonly class="mt-2 w-full rounded-lg border-slate-200" placeholder="Selecione Redefinir senha na conta desejada"></label>
+</main><script src="/js/acesso.js" defer></script><script src="/js/admin.js" defer></script><script src="/js/interface.js"></script></body></html>

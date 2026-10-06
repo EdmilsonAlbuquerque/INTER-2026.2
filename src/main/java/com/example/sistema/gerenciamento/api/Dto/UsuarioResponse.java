@@ -11,7 +11,7 @@ public record UsuarioResponse(
         String telefone,
         String cpf,
         String fotoUrl,
-        String tokenConvite,
+        com.example.sistema.gerenciamento.api.Entity.Perfil perfil,
         LocalDate dataNascimento,
         boolean ativo,
         LocalDateTime dataCadastro
@@ -24,7 +24,7 @@ public record UsuarioResponse(
                 usuario.getTelefone(),
                 usuario.getCpf(),
                 usuario.getFotoUrl(),
-                usuario.getTokenConvite(),
+                usuario.getPerfil(),
                 usuario.getDataNascimento(),
                 usuario.isAtivo(),
                 usuario.getDataCadastro()

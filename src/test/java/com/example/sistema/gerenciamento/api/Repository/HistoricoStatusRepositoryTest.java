@@ -40,7 +40,7 @@ class HistoricoStatusRepositoryTest {
         // Arrange: cria uma participacao e dois eventos em momentos diferentes.
         Pessoa pessoa = pessoaRepository.save(new Pessoa(
                 null, "Pessoa Historico", "MAT-HIST", "historico@exemplo.com", "11111111111",
-                null, null, null, null));
+                "85999999999", null, null, null, null));
         Responsavel responsavel = responsavelRepository.save(new Responsavel(
                 null, "Gestor Historico", "gestor@exemplo.com", null));
         Servico servico = servicoRepository.save(new Servico(
@@ -49,10 +49,10 @@ class HistoricoStatusRepositoryTest {
                 null, LocalDateTime.now().plusDays(1), StatusAtividade.PENDENTE, pessoa, servico));
         LocalDateTime maisAntiga = LocalDateTime.now().minusMinutes(10);
         LocalDateTime maisRecente = LocalDateTime.now();
-        repository.save(new HistoricoStatus(null, maisAntiga, StatusAtividade.PENDENTE,
-                "Criado", participacao, null));
-        repository.save(new HistoricoStatus(null, maisRecente, StatusAtividade.ATIVO,
-                "Ativado", participacao, null));
+        repository.save(HistoricoStatus.builder().dataAlteracao(maisAntiga)
+                .status(StatusAtividade.PENDENTE).observacao("Criado").participacao(participacao).build());
+        repository.save(HistoricoStatus.builder().dataAlteracao(maisRecente)
+                .status(StatusAtividade.ATIVO).observacao("Ativado").participacao(participacao).build());
 
         // Act: busca o historico pela participacao.
         var historico = repository.findByParticipacaoIdOrderByDataAlteracaoDesc(participacao.getId());

@@ -26,12 +26,14 @@ class PessoaRepositoryTest {
                 .matricula("MAT-001")
                 .email("ana@exemplo.com")
                 .cpf("11122233344")
+                .telefone("85999999991")
                 .build());
         repository.save(Pessoa.builder()
                 .nome("Bruno Lima")
                 .matricula("MAT-002")
                 .email("bruno@exemplo.com")
                 .cpf("55566677788")
+                .telefone("85999999992")
                 .build());
 
         // Act: usa cada consulta publica do repositorio.
@@ -58,6 +60,8 @@ class PessoaRepositoryTest {
                 .nome("Primeira Pessoa")
                 .matricula("MAT-UNICA")
                 .email("primeira@exemplo.com")
+                .cpf("11122233344")
+                .telefone("85999999991")
                 .build());
 
         // Act e Assert: o segundo cadastro viola a restricao unique.
@@ -66,6 +70,8 @@ class PessoaRepositoryTest {
                         .nome("Segunda Pessoa")
                         .matricula("MAT-UNICA")
                         .email("segunda@exemplo.com")
+                        .cpf("55566677788")
+                        .telefone("85999999992")
                         .build()));
     }
 }

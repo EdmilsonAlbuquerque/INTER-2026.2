@@ -38,7 +38,7 @@ class ParticipacaoRepositoryTest {
         // Arrange: cria os agregados necessarios antes dos vinculos.
         Pessoa pessoa = pessoaRepository.save(new Pessoa(
                 null, "Pessoa Teste", "MAT-PART", "pessoa@exemplo.com", "99988877766",
-                null, null, null, null));
+                "85999999999", null, null, null, null));
         Responsavel responsavel = responsavelRepository.save(new Responsavel(
                 null, "Responsavel Teste", "resp@exemplo.com", null));
         Servico servico = servicoRepository.save(new Servico(

@@ -1,0 +1,196 @@
+<!DOCTYPE html><html class="h-full" lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ação Social Viva - Criar Conta Institucional</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#EEF2FF',
+              100: '#E0E7FF',
+              500: '#3B82F6',
+              600: '#2563EB',
+              700: '#1D4ED8',
+              800: '#1E40AF',
+              900: '#1E3A8A',
+            },
+            surface: {
+              sidebar: '#F8FAFC',
+              input: '#F8FAFC',
+            }
+          },
+          boxShadow: {
+            'soft-card': '0 10px 30px -5px rgba(15, 23, 42, 0.05), 0 4px 12px -2px rgba(15, 23, 42, 0.025)',
+            'floating': '0 20px 35px -8px rgba(30, 64, 175, 0.08), 0 8px 16px -4px rgba(15, 23, 42, 0.03)',
+          }
+        }
+      }
+    };
+  </script>
+<!-- Custom Styles for Donut Chart & Visual Polish -->
+<style data-purpose="custom-elements">
+    .chart-segment {
+      transform-origin: center;
+      transition: stroke-dasharray 0.5s ease;
+    }
+    /* Custom scrollbar for right panel when needed */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #e2e8f0;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #cbd5e1;
+    }
+  </style>
+</head>
+<body class="h-full bg-white text-slate-800 font-sans antialiased select-none">
+<!-- BEGIN: MainContainer -->
+<main class="w-full h-full min-h-screen flex flex-col lg:flex-row" data-purpose="main-layout-split">
+<!-- BEGIN: LeftBrandShowcase -->
+<section class="hidden lg:flex lg:w-1/2 bg-[#F8FAFC] flex-col justify-between p-12 xl:p-16 border-r border-slate-100 relative overflow-hidden" data-purpose="brand-showcase"><div class="absolute inset-0 pointer-events-none"><img src="https://lh3.googleusercontent.com/aida/AEtjO1WPPZnQ_o1hZ9MbAIj5ZKvWjBJF51U-xUnMbF0c1RYKJytrtB4sL5zjiU8424oE6SmHhVsnoQ-bZ07-HWtQwhXOToUrU7GKXGp_nHbyqk3mFwDk84aoV46HGd_eQJBx4Ni11QJTrsfpszDX86o2ECJWrcZluQjCTlrfpLvmp9IhVdYHW2wp2rh4whjl_LlKkryRJLoeLKVcbNwjaXzUP8fp2NKZIcfOfJxK_5wDOD2vF4WuCDsFslqgFw" alt="Ilustração abstrata em gradiente de conexões comunitárias" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-slate-900/60"></div></div><header class="flex items-center space-x-3 z-10" data-purpose="company-logo"><div class="inline-flex items-center space-x-3 bg-white/90 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-md border border-white/60"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5n_6YpLb6m513xYZoFk0Cb7fQkCq9MgQnrB3oZliWoUKGzcDrak4ONeexhr6KSBZjGMsGCqazUj5w8J2yYBB0e3gZZIpaZSm4jcWYd2JsT49mZMgvOmZU68QgmuVPOzpyFwlJdB6NRocxmhRb3JruKhclFFRhcx041ekSDSu4It_6x2sCCmWWOLVlGz-G1wWH_gf1feMiNp8YeH3kx_3uoyBcLIWs_1R6ryB9i4q6FIn2fIoQQ5s6DD4qwjRfJrOafA" alt="Instituto Manancial" class="h-10 w-auto object-contain"><div class="flex flex-col"><span class="text-base font-bold tracking-tight text-slate-900 leading-none">Instituto Manancial</span><span class="text-[11px] text-slate-600 font-medium mt-0.5">Ação Social &amp; Gestão Comunitária</span></div></div></header><div class="relative w-full max-w-[440px] mx-auto my-auto py-8 flex items-center justify-center" data-purpose="floating-cards-composition"></div><footer class="mt-auto pt-6 z-10"><div class="max-w-md"><div class="bg-slate-900/60 backdrop-blur-md p-6 rounded-2xl border border-white/10 text-white space-y-2 shadow-lg"><div class="flex items-center space-x-2 text-blue-200 text-xs font-semibold uppercase tracking-wider"><span class="material-symbols-outlined text-sm">favorite</span><span class="">Transformando Vidas &amp; Famílias</span></div><p class="text-lg font-semibold leading-snug text-white">"Centralize prontuários, gestão de benefícios e acompanhamento familiar com segurança de ponta a ponta."</p></div></div><div class="flex items-center space-x-3 mt-5"><div class="flex items-center space-x-1.5"><span class="w-6 h-1.5 rounded-full bg-brand-800"></span><span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span><span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span></div></div></footer></section>
+<!-- END: LeftBrandShowcase -->
+<!-- BEGIN: RightAuthForm -->
+<section class="w-full lg:w-1/2 bg-white flex flex-col justify-between p-6 sm:p-10 lg:p-12 xl:p-16 overflow-y-auto" data-purpose="auth-panel">
+<!-- Mobile Header -->
+<div class="lg:hidden flex items-center space-x-2.5 mb-6 pb-4 border-b border-slate-100"><div class="w-8 h-8 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center text-brand-800"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ5Qv_bALqJthZNeL7QQQ8sme9JL0iaNuMslxuZdtMO_iLXQpcvpP9PtxypxuyoCpzEkftuiKD8Jtzoxy3E4ZY2EQNgYgtv_G_QLk0KC7rvjwombm00226jVkyOo678_VTYncuAoOQcvYT90sqtGqw5cbngrAa3ED1yspkITYeZfiSEDBf0pHZJZ58q8NdYOyrnS9dT2F8oGhVpxLyxpbRzsQ5Mv9pwpPJ_vFTGrJFc4iSPZavvX4BOjPzw2yhp0Hl-Q" alt="Instituto Manancial" class="h-6 w-auto object-contain"></div><div><span class="text-sm font-bold tracking-tight text-slate-900 leading-tight block">INSTITUTO MANANCIAL</span><span class="text-[10px] text-slate-500 tracking-wider">GESTÃO SOCIOASSISTENCIAL</span></div></div>
+<!-- Form Container -->
+<div class="w-full max-w-md mx-auto my-auto py-2" data-purpose="signup-form-container"><header class="mb-6 text-left">
+<h1 class="text-2xl sm:text-[26px] font-bold text-slate-900 tracking-tight">Criar conta</h1>
+<p class="text-xs sm:text-sm text-slate-500 mt-1">Preencha os dados para acessar o sistema institucional.</p>
+</header>
+<form action="#" class="space-y-3.5" data-purpose="signup-form" method="POST" onsubmit="event.preventDefault();">
+<!-- NOME COMPLETO -->
+<div class="space-y-1">
+<label class="block text-[11px] font-semibold tracking-wider text-slate-600 uppercase" for="fullname">Nome Completo</label>
+<div class="relative rounded-xl border border-slate-200 bg-white focus-within:border-brand-800 focus-within:ring-2 focus-within:ring-blue-100 transition-all duration-200">
+<input class="w-full px-3.5 py-2.5 bg-transparent border-0 text-sm text-slate-900 placeholder-slate-400 focus:ring-0 focus:outline-none rounded-xl" id="fullname" name="fullname" placeholder="Como deseja ser chamado?" required="" type="text">
+</div>
+</div>
+<!-- 2 COLUNAS: CPF + DATA DE NASCIMENTO -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="space-y-1">
+<label class="block text-[11px] font-semibold tracking-wider text-slate-600 uppercase" for="cpf">CPF</label>
+<div class="relative rounded-xl border border-slate-200 bg-white focus-within:border-brand-800 focus-within:ring-2 focus-within:ring-blue-100 transition-all duration-200">
+<input class="w-full px-3.5 py-2.5 bg-transparent border-0 text-sm text-slate-900 placeholder-slate-400 focus:ring-0 focus:outline-none rounded-xl" id="cpf" name="cpf" placeholder="000.000.000-00" required="" type="text">
+</div>
+</div>
+<div class="space-y-1">
+<label class="block text-[11px] font-semibold tracking-wider text-slate-600 uppercase" for="birthdate">Data de Nascimento</label>
+<div class="relative rounded-xl border border-slate-200 bg-white focus-within:border-brand-800 focus-within:ring-2 focus-within:ring-blue-100 transition-all duration-200">
+<input class="w-full pl-3.5 pr-9 py-2.5 bg-transparent border-0 text-sm text-slate-900 placeholder-slate-400 focus:ring-0 focus:outline-none rounded-xl" id="birthdate" name="birthdate" placeholder="dd/mm/aaaa" required="" type="text">
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-slate-400">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 2 COLUNAS: E-MAIL + TELEFONE -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="space-y-1">
+<label class="block text-[11px] font-semibold tracking-wider text-slate-600 uppercase" for="email">E-mail</label>
+<div class="relative rounded-xl border border-slate-200 bg-white focus-within:border-brand-800 focus-within:ring-2 focus-within:ring-blue-100 transition-all duration-200">
+<input class="w-full px-3.5 py-2.5 bg-transparent border-0 text-sm text-slate-900 placeholder-slate-400 focus:ring-0 focus:outline-none rounded-xl" id="email" name="email" placeholder="seu@email.com" required="" type="email">
+</div>
+</div>
+<div class="space-y-1">
+<label class="block text-[11px] font-semibold tracking-wider text-slate-600 uppercase" for="phone">Telefone</label>
+<div class="relative rounded-xl border border-slate-200 bg-white focus-within:border-brand-800 focus-within:ring-2 focus-within:ring-blue-100 transition-all duration-200">
+<input class="w-full px-3.5 py-2.5 bg-transparent border-0 text-sm text-slate-900 placeholder-slate-400 focus:ring-0 focus:outline-none rounded-xl" id="phone" name="phone" placeholder="(00) 00000-0000" required="" type="tel">
+</div>
+</div>
+</div>
+<!-- SENHA -->
+<div class="space-y-1">
+<label class="block text-[11px] font-semibold tracking-wider text-slate-600 uppercase" for="password">Senha</label>
+<div class="relative rounded-xl border border-slate-200 bg-white focus-within:border-brand-800 focus-within:ring-2 focus-within:ring-blue-100 transition-all duration-200">
+<input class="w-full pl-3.5 pr-10 py-2.5 bg-transparent border-0 text-sm text-slate-900 placeholder-slate-400 focus:ring-0 focus:outline-none rounded-xl" id="password" minlength="8" maxlength="72" autocomplete="new-password" name="password" placeholder="Mínimo 8 caracteres" required="" type="password">
+<button aria-label="Mostrar ou ocultar senha" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-600 focus:outline-none" id="toggle-password" type="button">
+<span class="material-symbols-outlined text-lg" id="eye-icon-span">visibility</span>
+</button>
+</div>
+</div>
+<!-- TOKEN DE CONVITE -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<label class="block text-[11px] font-semibold tracking-wider text-slate-600 uppercase" for="invite_token">Token de Convite</label>
+<span class="text-[10px] text-brand-800 font-medium bg-blue-50 px-1.5 py-0.5 rounded border border-blue-100">Código Institucional</span>
+</div>
+<div class="relative rounded-xl border border-slate-200 bg-white focus-within:border-brand-800 focus-within:ring-2 focus-within:ring-blue-100 transition-all duration-200">
+<input class="w-full px-3.5 py-2.5 bg-transparent border-0 text-sm text-slate-900 placeholder-slate-400 focus:ring-0 focus:outline-none rounded-xl" id="invite_token" name="invite_token" placeholder="Insira seu código de acesso" required="" type="text">
+</div>
+<p class="text-[11px] text-slate-400 pl-1">Fornecido pela coordenação da sua unidade socioassistencial.</p>
+</div>
+<!-- TERMOS E ACEITE -->
+<div class="pt-1">
+<label class="flex items-start space-x-2.5 cursor-pointer text-left">
+<input class="w-4 h-4 mt-0.5 rounded border-slate-300 text-brand-800 focus:ring-brand-600 focus:ring-offset-0 shrink-0" required="" type="checkbox">
+<span class="text-xs text-slate-600 leading-tight">
+Li e aceito os <a class="text-brand-800 underline hover:text-brand-900 font-medium" href="#">Termos de Uso</a> e a <a class="text-brand-800 underline hover:text-brand-900 font-medium" href="#">Política de Privacidade</a>.
+</span>
+</label>
+</div>
+<!-- SUBMIT BUTTON -->
+<div class="pt-2">
+<button class="w-full py-3 px-4 rounded-xl bg-brand-800 hover:bg-brand-900 text-white text-sm font-semibold tracking-wide shadow-md shadow-brand-500/20 hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-800 focus:ring-offset-2 flex items-center justify-center gap-2" type="submit">
+Cadastrar
+</button>
+</div>
+<!-- RODAPÉ DO CARD: LOGIN LINK -->
+<div class="text-center pt-3">
+<p class="text-xs text-slate-600">
+Já tenho conta?
+<a class="font-semibold text-brand-800 hover:text-brand-900 hover:underline transition-colors ml-1" href="/login">
+Fazer login
+</a>
+</p>
+</div>
+</form></div>
+<!-- Security Footer -->
+<footer class="mt-auto pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 gap-2" data-purpose="copyright-footer"><span class="">© 2024 Instituto Manancial. Todos os direitos reservados.</span>
+<div class="flex items-center space-x-3">
+<a class="hover:text-slate-600 transition-colors" href="#">Política de Privacidade</a>
+<span class="">•</span>
+<a class="hover:text-slate-600 transition-colors" href="#">Suporte</a>
+</div></footer>
+</section>
+<!-- END: RightAuthForm -->
+</main>
+<!-- END: MainContainer -->
+<!-- Interactive script for password toggle -->
+<script data-purpose="event-handlers">
+  document.addEventListener('DOMContentLoaded', () => {
+    const togglePasswordBtn = document.getElementById('toggle-password');
+    const passwordInput = document.getElementById('password');
+    const eyeIcon = document.getElementById('eye-icon-span');
+
+    if (togglePasswordBtn && passwordInput && eyeIcon) {
+      togglePasswordBtn.addEventListener('click', () => {
+        const isPassword = passwordInput.type === 'password';
+        passwordInput.type = isPassword ? 'text' : 'password';
+        eyeIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+      });
+    }
+  });
+</script>
+
+
+<script src="/js/navegacao.js" defer></script><script src="/js/acesso.js" defer></script></body></html>

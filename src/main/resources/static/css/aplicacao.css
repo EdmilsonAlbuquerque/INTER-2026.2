@@ -1,0 +1,10 @@
+html { min-height: 100%; }
+body.app-shell { min-height: 100vh; }
+.app-shell > header > div { height: auto; min-height: 64px; flex-wrap: wrap; padding-top: 8px; padding-bottom: 8px; }
+.app-shell > header > div > div { flex-wrap: wrap; }
+.app-shell > header nav { flex-wrap: wrap; }
+.app-shell dialog { color: #0f172a; border: 0; border-radius: 16px; padding: 24px; width: min(640px, calc(100% - 32px)); max-height: 90vh; overflow-y: auto; }
+.app-shell dialog::backdrop { background: rgb(15 23 42 / .45); }
+.app-shell input:not([type=checkbox]):not([type=radio]), .app-shell select, .app-shell textarea { max-width: 100%; }
+.app-shell .campo { display:block; width:100%; border:1px solid #cbd5e1; border-radius:8px; padding:10px; background:white; margin-top:4px; }
+.app-shell button:disabled { opacity:.5; cursor:wait; }

@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class UsuarioService {
 
     private final UsuarioRepository usuarioRepository;
+    private final org.springframework.security.crypto.password.PasswordEncoder passwordEncoder;
 
     // [ GET ] - RETORNA TODOS OS USUÁRIOS CADASTRADOS
     @Transactional(readOnly = true)
@@ -43,7 +44,8 @@ public class UsuarioService {
     // [ POST ] - VALIDA DUPLICIDADES E CADASTRA UM NOVO USUÁRIO
     @Transactional
     public UsuarioResponse salvar(UsuarioRequest dto) {
-        if (usuarioRepository.existsByEmail(dto.email())) {
+        AcessoService.validarSenha(dto.senha());
+        if (usuarioRepository.existsByEmailIgnoreCase(dto.email().trim())) {
             throw new IllegalArgumentException("Já existe um usuário cadastrado com o e-mail informado.");
         }
         if (dto.cpf() != null && !dto.cpf().isBlank() && usuarioRepository.existsByCpf(dto.cpf())) {
@@ -52,12 +54,11 @@ public class UsuarioService {
 
         Usuario usuario = Usuario.builder()
                 .nomeCompleto(dto.nomeCompleto())
-                .email(dto.email())
-                .senha(dto.senha())
+                .email(AcessoService.normalizarEmail(dto.email()))
+                .senha(passwordEncoder.encode(dto.senha()))
                 .telefone(dto.telefone())
                 .cpf(dto.cpf())
                 .fotoUrl(dto.fotoUrl())
-                .tokenConvite(dto.tokenConvite())
                 .dataNascimento(dto.dataNascimento())
                 .ativo(dto.ativo() != null ? dto.ativo() : true)
                 .build();
@@ -68,32 +69,35 @@ public class UsuarioService {
     // [ PUT ] - ATUALIZA OS DADOS DE UM USUÁRIO EXISTENTE
     @Transactional
     public UsuarioResponse atualizar(Long id, UsuarioRequest dto) {
+        var administradores = usuarioRepository.bloquearAdministradores();
         Usuario usuario = usuarioRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Usuário não encontrado com o ID: " + id));
 
-        if (!usuario.getEmail().equalsIgnoreCase(dto.email()) && usuarioRepository.existsByEmail(dto.email())) {
+        if (!usuario.getEmail().equalsIgnoreCase(dto.email().trim()) && usuarioRepository.existsByEmailIgnoreCase(dto.email().trim())) {
             throw new IllegalArgumentException("Já existe outro usuário cadastrado com o e-mail informado.");
         }
 
-        if (dto.cpf() != null && !dto.cpf().isBlank() 
-                && !dto.cpf().equals(usuario.getCpf()) 
+        if (dto.cpf() != null && !dto.cpf().isBlank()
+                && !dto.cpf().equals(usuario.getCpf())
                 && usuarioRepository.existsByCpf(dto.cpf())) {
             throw new IllegalArgumentException("Já existe outro usuário cadastrado com o CPF informado.");
         }
 
         usuario.setNomeCompleto(dto.nomeCompleto());
-        usuario.setEmail(dto.email());
+        usuario.setEmail(AcessoService.normalizarEmail(dto.email()));
         if (dto.senha() != null && !dto.senha().isBlank()) {
-            usuario.setSenha(dto.senha());
+            AcessoService.validarSenha(dto.senha());
+            usuario.setSenha(passwordEncoder.encode(dto.senha()));
         }
         usuario.setTelefone(dto.telefone());
         usuario.setCpf(dto.cpf());
         usuario.setFotoUrl(dto.fotoUrl());
-        usuario.setTokenConvite(dto.tokenConvite());
         usuario.setDataNascimento(dto.dataNascimento());
         if (dto.ativo() != null) {
+            AcessoService.protegerUltimoAdministrador(usuario, usuario.getPerfil(), dto.ativo(), administradores);
             usuario.setAtivo(dto.ativo());
         }
+        usuario.setVersaoAcesso(usuario.getVersaoAcesso() + 1);
 
         return UsuarioResponse.fromEntity(usuarioRepository.save(usuario));
     }
@@ -101,9 +105,12 @@ public class UsuarioService {
     // [ DELETE ] - REMOVE UM USUÁRIO DO BANCO DE DADOS PELO ID
     @Transactional
     public void excluir(Long id) {
+        var administradores = usuarioRepository.bloquearAdministradores();
         if (!usuarioRepository.existsById(id)) {
             throw new ResourceNotFoundException("Usuário não encontrado com o ID: " + id);
         }
+        var usuario = usuarioRepository.findById(id).orElseThrow();
+        AcessoService.protegerUltimoAdministrador(usuario, usuario.getPerfil(), false, administradores);
         usuarioRepository.deleteById(id);
     }
 }

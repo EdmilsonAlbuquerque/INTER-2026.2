@@ -1,6 +1,5 @@
 package com.example.sistema.gerenciamento.api.Entity;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -9,40 +8,49 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/** Vinculo entre uma pessoa e um servico em um horario especifico. */
+// @Entity habilita o armazenamento da participacao pelo JPA.
 @Entity
-@Table(name = "participacoes")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class Participacao {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	/** Identificador gerado automaticamente. */
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    @Column(name = "data_hora", nullable = false)
-    private LocalDateTime dataHora;
+	/** Data futura em que o servico sera realizado. */
+	@NotNull
+	@Future
+	private LocalDateTime dataHora;
 
-	@Builder.Default
-    @Enumerated(EnumType.STRING)
-    @Column(name = "status", nullable = false, length = 30)
-    private StatusAtividade status = StatusAtividade.AGENDADA;
+	// EnumType.STRING preserva o nome do status no banco, evitando ordinal fragil.
+	@Enumerated(EnumType.STRING)
+	/** Status atual da participacao. */
+	private StatusAtividade status = StatusAtividade.AGENDADA;
 
-    @ManyToOne
-    @JoinColumn(name = "pessoa_id", nullable = false)
-    private Pessoa pessoa;
+	// @ManyToOne permite varias participacoes da mesma pessoa.
+	@ManyToOne
+	// A chave estrangeira e obrigatoria para preservar o vinculo.
+	@JoinColumn(name = "pessoa_id", nullable = false)
+	/** Pessoa vinculada ao agendamento. */
+	private Pessoa pessoa;
 
-    @ManyToOne
-    @JoinColumn(name = "servico_id", nullable = false)
-    private Servico servico;
+	// Uma mesma atividade pode receber varias participacoes.
+	@ManyToOne
+	@JoinColumn(name = "servico_id", nullable = false)
+	/** Servico escolhido pela pessoa. */
+	private Servico servico;
+
 }

@@ -1,0 +1,944 @@
+<!DOCTYPE html><html data-lt-installed="true" lang="pt-BR" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#b8c4ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "tertiary-fixed": "#d5e4f8", "background": "#f8f9ff", "primary-fixed": "#dde1ff", "on-tertiary-container": "#adbccf", "on-background": "#0b1c30", "error": "#ba1a1a", "on-surface": "#0b1c30", "outline-variant": "#c4c5d5", "on-error": "#ffffff", "surface-container-high": "#dce9ff", "surface-container": "#e5eeff", "surface-dim": "#cbdbf5", "inverse-surface": "#213145", "on-secondary-container": "#145283", "surface": "#f8f9ff", "primary": "#00288e", "on-secondary-fixed": "#001d35", "on-primary-fixed-variant": "#173bab", "tertiary-container": "#3e4c5c", "on-surface-variant": "#444653", "on-secondary-fixed-variant": "#03497a", "surface-container-lowest": "#ffffff", "surface-container-low": "#eff4ff", "secondary": "#2b6193", "on-error-container": "#93000a", "surface-bright": "#f8f9ff", "on-primary-container": "#a8b8ff", "error-container": "#ffdad6", "outline": "#757684", "secondary-fixed-dim": "#9ccaff", "primary-container": "#1e40af", "on-primary-fixed": "#001453", "surface-container-highest": "#d3e4fe", "tertiary-fixed-dim": "#b9c8db", "secondary-container": "#93c5fd", "surface-variant": "#d3e4fe", "inverse-on-surface": "#eaf1ff", "primary-fixed-dim": "#b8c4ff", "on-primary": "#ffffff", "surface-tint": "#3755c3", "on-tertiary-fixed": "#0e1d2b", "tertiary": "#273545", "on-tertiary-fixed-variant": "#3a4858", "secondary-fixed": "#d0e4ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter": "1rem", "gutter-desktop": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem", "margin": "1rem", "margin-tablet": "1.5rem", "space-xs": "0.25rem", "space-xl": "2rem", "space-lg": "1.5rem", "margin-desktop": "2rem" }, fontFamily: { "label-sm": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "display-lg": ["Inter"], "display-lg-mobile": ["Inter"], "headline-md": ["Inter"], "label-lg": ["Inter"] }, fontSize: { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.025em", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "500" }] } } } };</script><link rel="stylesheet" href="/css/aplicacao.css"></head><body class="bg-surface font-body-md text-body-md text-on-surface"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full max-w-7xl mx-auto px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-2"><img alt="Instituto Manancial" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_igSv0eovCmB4HYGtT4m0Y1CVL-qsT0bOgomIXY3Yf8OxgUWDRyvmOEm-qt6T59dXwrfkuiyq7SC124goboCR__HYQ6w67w-evUEQoZlazRJmgscHv-ANGLbAAAKu54mMOEF2a9ZTKZvlo8hJgwbRrPb5qNlsnRG1jWnloaJbzsns8HrQR4oEakeU18ypxmZ5k-3D3aeXB5QngvEpQDbu0Ij-y1pHb_9bhMz6vEJkvZex3cCpIEsJ76HYZb02ThqCTw"><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">Instituto Manancial</span></div><nav class="hidden md:flex items-center gap-space-xs" data-active-classes="bg-secondary-container text-on-secondary-container font-label-md rounded-lg"><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="atendimentos" href="/cadastro-pessoa">Novo Cadastro</a><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-secondary-container text-on-secondary-container font-label-md rounded-lg" data-path="pessoas-familias" href="/gerenciamento">Gerenciamento</a></nav></div><div class="relative" id="userMenuContainer"><button aria-expanded="false" aria-haspopup="true" class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-surface-container transition-colors focus:outline-none focus:ring-2 focus:ring-secondary-container" id="userMenuButton" type="button"><div class="hidden sm:flex flex-col items-end text-left"><span class="font-label-md text-label-md text-on-surface font-semibold">Ana Souza</span><span class="font-label-sm text-[11px] text-on-surface-variant leading-none">Assistente Social</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="material-symbols-outlined text-outline text-[18px] transition-transform duration-300" id="userMenuChevron">expand_more</span></button><div class="absolute right-0 mt-2 w-64 bg-surface-container-lowest rounded-xl shadow-xl border border-surface-container-high z-50 overflow-hidden hidden" id="userMenuDropdown"><div class="px-4 py-3 bg-surface-container-low/60"><p class="font-headline-sm text-body-md text-on-surface font-semibold truncate">Ana Souza</p><p class="font-label-sm text-label-sm text-on-surface-variant truncate">Assistente Social</p></div><div class="border-t border-surface-container-high"></div><div class="p-1.5 flex flex-col gap-0.5"><a class="flex items-center gap-2 px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container-low hover:text-primary transition-colors" href="/meu-perfil"><span class="material-symbols-outlined text-[18px] text-secondary">account_circle</span>Editar meu perfil</a></div><div class="border-t border-surface-container-high"></div><div class="p-1.5"><button class="w-full flex items-center gap-2 px-3 py-2 rounded-lg font-label-md text-label-md text-error hover:bg-[#FEF2F2] transition-colors" type="button"><span class="material-symbols-outlined text-[18px] text-error">logout</span>Sair</button></div></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Container Central da Página -->
+<div class="w-full max-w-7xl mx-auto px-margin-tablet lg:px-margin-desktop py-space-lg flex flex-col gap-space-lg">
+<!-- 1. CABEÇALHO DA PÁGINA COM BREADCRUMB E AÇÕES -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<!-- Breadcrumb -->
+<nav aria-label="Navegação estrutural" class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">groups</span>
+<span class="">Pessoas &amp; Famílias</span>
+</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Gerenciamento de Pessoas</span>
+</nav>
+<!-- Título & Subtítulo -->
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">
+          Gerenciamento de Pessoas
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Consulte, filtre e acompanhe os beneficiários e famílias atendidas pelos projetos sociais e programas de acolhimento.
+        </p>
+</div>
+<!-- Ações de Cabeçalho -->
+<div class="flex items-center gap-space-sm self-start lg:self-end">
+<button class="h-10 px-space-md bg-surface-container-lowest text-on-surface hover:bg-surface-container-low transition-colors rounded-lg font-label-md text-label-md shadow-sm flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span class="">Exportar Relatório</span>
+</button>
+</div>
+</div>
+<!-- Indicador de Resumo e Métricas Rápidas -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">badge</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Cadastrados</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">84</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-[#ECFDF5] flex items-center justify-center text-[#10B981]">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Ativos nos Projetos</span>
+<span class="font-headline-sm text-headline-sm text-[#10B981] font-bold">67</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-[#FEF3C7] flex items-center justify-center text-[#B45309]">
+<span class="material-symbols-outlined text-[22px]">hourglass_top</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Pendentes de Acolhimento</span>
+<span class="font-headline-sm text-headline-sm text-[#B45309] font-bold">11</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">child_care</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Menores de Idade (ECA)</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">39</span>
+</div>
+</div>
+</div>
+<!-- 2. BARRA DE FILTROS E PESQUISA -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm items-center">
+<!-- Campo de Busca Principal -->
+<div class="md:col-span-4 relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[20px] pointer-events-none">search</span>
+<input class="w-full h-10 pl-10 pr-9 bg-surface-container-low text-on-surface rounded-lg font-body-md text-body-md placeholder:text-on-surface-variant focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all" id="searchInput" placeholder="Buscar por nome completo ou CPF..." type="text" value="">
+<button class="hidden absolute right-2.5 p-1 text-outline hover:text-on-surface rounded-full" id="clearSearchBtn" title="Limpar busca" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Dropdown Status -->
+<div class="md:col-span-3">
+<label class="sr-only" for="statusFilter">Status</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface-container-low text-on-surface rounded-lg font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-secondary-container appearance-none transition-all cursor-pointer" id="statusFilter">
+<option value="">Status: Todos</option>
+<option value="Ativo">● Ativo</option>
+<option value="Pendente">● Pendente</option>
+<option value="Suspenso">● Suspenso</option>
+<option value="Desligado">● Desligado</option>
+<option value="Inativo">● Inativo</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Dropdown Serviço Vinculado -->
+<div class="md:col-span-3">
+<label class="sr-only" for="serviceFilter">Serviço Vinculado</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface-container-low text-on-surface rounded-lg font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-secondary-container appearance-none transition-all cursor-pointer truncate" id="serviceFilter">
+<option value="">Serviço: Todos os serviços</option>
+<option value="Oficinas Culturais">Oficinas Culturais e Artísticas</option>
+<option value="Apoio Psicossocial">Apoio Psicossocial</option>
+<option value="Capacitação Profissional">Capacitação Profissional Jovem</option>
+<option value="Cestas Básicas">Distribuição de Cestas Básicas</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Filtro Faixa Etária (Botões Segmentados) -->
+<div class="md:col-span-2 flex items-center bg-surface-container-low rounded-lg p-0.5">
+<button class="flex-1 py-1.5 px-2 text-center rounded-md font-label-sm text-label-sm bg-surface-container-lowest text-primary font-semibold shadow-xs" type="button">Todos</button>
+<button class="flex-1 py-1.5 px-2 text-center rounded-md font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" type="button">&lt;18</button>
+<button class="flex-1 py-1.5 px-2 text-center rounded-md font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" type="button">≥18</button>
+</div>
+</div>
+<!-- Linha Inferior da Barra de Filtros: Contador e Ação de Limpeza -->
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant">
+<div class="flex items-center gap-2 font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-medium text-on-surface" id="resultsCounter">84 pessoas cadastradas</span>
+<span class="text-outline">•</span>
+<span class="text-on-surface-variant">Filtros aplicados: <strong class="font-medium text-on-surface">Todos</strong></span>
+</div>
+<div class="flex items-center gap-space-sm">
+<!-- Botão Demonstrativo de Estado Vazio -->
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-primary rounded font-label-sm text-label-sm flex items-center gap-1 transition-colors" onclick="toggleEmptyState()" title="Clique para testar o comportamento visual de lista vazia" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span class="" id="toggleEmptyLabel">Simular Busca Vazia</span>
+</button>
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-error rounded font-label-sm text-label-sm flex items-center gap-1 transition-colors" id="resetFiltersBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">filter_alt_off</span>
+<span class="">Limpar filtros</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 3. TABELA PRINCIPAL DE DADOS & ESTADO VAZIO -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Visão da Tabela (Visível por Padrão) -->
+<div class="w-full overflow-x-auto" id="tableView">
+<table class="w-full text-left font-body-md text-body-md border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-primary font-headline-sm text-label-lg">
+<th class="py-3 px-4 font-semibold" scope="col">Nome Completo</th>
+<th class="py-3 px-4 font-semibold whitespace-nowrap" scope="col">CPF</th>
+<th class="py-3 px-4 font-semibold whitespace-nowrap" scope="col">Telefone</th>
+<th class="py-3 px-4 font-semibold" scope="col">Serviço Vinculado</th>
+<th class="py-3 px-4 font-semibold" scope="col">Status</th>
+<th class="py-3 px-4 font-semibold whitespace-nowrap" scope="col">Data Cadastro</th>
+<th class="py-3 px-4 font-semibold text-right" scope="col">Ações</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-md" id="tableBody">
+<!-- Registro 1: Lucas Gabriel -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer" data-birth="12/03/1998" data-cpf="452.889.108-12" data-id="1" data-name="Lucas Gabriel Martins Ribeiro" data-notes="Participação ativa nas oficinas de teatro juvenil. Excelente assiduidade." data-phone="(11) 98765-4321" data-protocol="ASV-2024-0891" data-service="Oficinas Culturais (Teatro)" data-status="Ativo" id="row-1" onclick="openDrawer('Lucas Gabriel Martins Ribeiro', '14 anos', '452.889.108-12', '(11) 98765-4321', 'Ativo', 'ASV-2024-0891')">
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold text-label-sm avatar-badge">
+                    LM
+                  </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-sm text-body-lg text-primary font-semibold truncate person-name">Lucas Gabriel Martins Ribeiro</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface whitespace-nowrap person-cpf">452.889.108-12</td>
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface whitespace-nowrap person-phone">(11) 98765-4321</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-low text-primary font-label-sm text-label-sm font-medium person-service">
+                  Oficinas Culturais (Teatro)
+                </span>
+</td>
+<td class="py-3 px-4 person-status-cell">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold bg-[#ECFDF5] text-[#065F46]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span>
+                  Ativo
+                </span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-label-md text-label-md whitespace-nowrap">24/10/2024</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1" onclick="event.stopPropagation()">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" onclick="openEditModalFromRow('row-1')" title="Editar cadastro" type="button">
+<span class="material-symbols-outlined text-[19px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Registro 2: Maria Clara -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer" data-birth="05/08/1986" data-cpf="219.043.872-91" data-id="2" data-name="Maria Clara Ferreira dos Santos" data-notes="Família atendida pelo programa de segurança alimentar e cestas básicas." data-phone="(11) 96521-0022" data-protocol="ASV-2023-0142" data-service="Cestas Básicas &amp; Apoio" data-status="Ativo" id="row-2" onclick="openDrawer('Maria Clara Ferreira dos Santos', '38 anos', '219.043.872-91', '(11) 96521-0022', 'Ativo', 'ASV-2023-0142')">
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-bold text-label-sm avatar-badge">
+                    MF
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md text-on-surface font-semibold truncate person-name">Maria Clara Ferreira dos Santos</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface whitespace-nowrap person-cpf">219.043.872-91</td>
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface whitespace-nowrap person-phone">(11) 96521-0022</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-low text-primary font-label-sm text-label-sm font-medium person-service">
+                  Cestas Básicas &amp; Apoio
+                </span>
+</td>
+<td class="py-3 px-4 person-status-cell">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold bg-[#ECFDF5] text-[#065F46]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span>
+                  Ativo
+                </span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-label-md text-label-md whitespace-nowrap">14/05/2023</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1" onclick="event.stopPropagation()">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" onclick="openEditModalFromRow('row-2')" title="Editar cadastro" type="button">
+<span class="material-symbols-outlined text-[19px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Registro 3: Kauan Oliveira (Pendente) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer" data-birth="17/09/2008" data-cpf="509.312.441-03" data-id="3" data-name="Kauan Oliveira de Albuquerque" data-notes="Aguardando envio do comprovante de escolaridade para validação da matrícula." data-phone="(11) 94432-1188" data-protocol="ASV-2024-0994" data-service="Capacitação Profissional" data-status="Pendente" id="row-3" onclick="openDrawer('Kauan Oliveira de Albuquerque', '16 anos', '509.312.441-03', '(11) 94432-1188', 'Pendente', 'ASV-2024-0994')">
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-[#FEF3C7] text-[#92400E] flex items-center justify-center font-bold text-label-sm avatar-badge">
+                    KO
+                  </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-sm text-body-md text-on-surface font-semibold truncate person-name">Kauan Oliveira de Albuquerque</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Matrícula: ASV-2024-0994</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface whitespace-nowrap person-cpf">509.312.441-03</td>
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface whitespace-nowrap person-phone">(11) 94432-1188</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-low text-primary font-label-sm text-label-sm font-medium person-service">
+                  Capacitação Profissional
+                </span>
+</td>
+<td class="py-3 px-4 person-status-cell">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold bg-[#FEF3C7] text-[#92400E]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#F59E0B]"></span>
+                  Pendente
+                </span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-label-md text-label-md whitespace-nowrap">18/10/2024</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1" onclick="event.stopPropagation()">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" onclick="openEditModalFromRow('row-3')" title="Editar cadastro" type="button">
+<span class="material-symbols-outlined text-[19px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Registro 4: Beatriz Helena (Apoio Psicossocial - Suspenso) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer" data-birth="22/11/1995" data-cpf="388.190.418-55" data-id="4" data-name="Beatriz Helena Nogueira" data-notes="Suspensão temporária a pedido do beneficiário por motivos de horário de trabalho." data-phone="(11) 97761-9002" data-protocol="ASV-2023-0442" data-service="Apoio Psicossocial" data-status="Suspenso" id="row-4" onclick="openDrawer('Beatriz Helena Nogueira', '29 anos', '388.190.418-55', '(11) 97761-9002', 'Suspenso', 'ASV-2023-0442')">
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-[#FFF7ED] text-[#C2410C] flex items-center justify-center font-bold text-label-sm avatar-badge">
+                    BN
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md text-on-surface font-semibold truncate person-name">Beatriz Helena Nogueira</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Matrícula: ASV-2023-0442</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface whitespace-nowrap person-cpf">388.190.418-55</td>
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface whitespace-nowrap person-phone">(11) 97761-9002</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-low text-primary font-label-sm text-label-sm font-medium person-service">
+                  Apoio Psicossocial
+                </span>
+</td>
+<td class="py-3 px-4 person-status-cell">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold bg-[#FFF7ED] text-[#C2410C]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#F97316]"></span>
+                  Suspenso
+                </span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-label-md text-label-md whitespace-nowrap">03/02/2024</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1" onclick="event.stopPropagation()">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" onclick="openEditModalFromRow('row-4')" title="Editar cadastro" type="button">
+<span class="material-symbols-outlined text-[19px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Registro 5: Jorge Luiz (Desligado) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer" data-birth="14/01/1972" data-cpf="104.982.730-80" data-id="5" data-name="Jorge Luiz Pinheiro da Silva" data-notes="Desligamento concluído após término do ciclo de suporte e inserção no mercado de trabalho." data-phone="(11) 95540-3329" data-protocol="ASV-2022-0051" data-service="Distribuição de Cestas" data-status="Desligado" id="row-5" onclick="openDrawer('Jorge Luiz Pinheiro da Silva', '52 anos', '104.982.730-80', '(11) 95540-3329', 'Desligado', 'ASV-2022-0051')">
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-[#FEF2F2] text-[#B91C1C] flex items-center justify-center font-bold text-label-sm avatar-badge">
+                    JP
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md text-on-surface font-semibold truncate person-name">Jorge Luiz Pinheiro da Silva</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Matrícula: ASV-2022-0051</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface whitespace-nowrap person-cpf">104.982.730-80</td>
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface whitespace-nowrap person-phone">(11) 95540-3329</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-low text-primary font-label-sm text-label-sm font-medium person-service">
+                  Distribuição de Cestas
+                </span>
+</td>
+<td class="py-3 px-4 person-status-cell">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold bg-[#FEF2F2] text-[#B91C1C]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#EF4444]"></span>
+                  Desligado
+                </span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-label-md text-label-md whitespace-nowrap">19/08/2022</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1" onclick="event.stopPropagation()">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" onclick="openEditModalFromRow('row-5')" title="Editar cadastro" type="button">
+<span class="material-symbols-outlined text-[19px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Registro 6: Camila Rocha (Inativo) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer" data-birth="30/06/2002" data-cpf="412.009.654-71" data-id="6" data-name="Camila Rocha Antunes" data-notes="Mudança de domicílio para outro município comunicada pela família." data-phone="(11) 98112-7643" data-protocol="ASV-2023-0610" data-service="Capacitação Profissional" data-status="Inativo" id="row-6" onclick="openDrawer('Camila Rocha Antunes', '22 anos', '412.009.654-71', '(11) 98112-7643', 'Inativo', 'ASV-2023-0610')">
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold text-label-sm avatar-badge">
+                    CR
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md text-on-surface font-semibold truncate person-name">Camila Rocha Antunes</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Matrícula: ASV-2023-0610</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface whitespace-nowrap person-cpf">412.009.654-71</td>
+<td class="py-3 px-4 font-label-md text-label-md text-on-surface whitespace-nowrap person-phone">(11) 98112-7643</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-low text-primary font-label-sm text-label-sm font-medium person-service">
+                  Capacitação Profissional
+                </span>
+</td>
+<td class="py-3 px-4 person-status-cell">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold bg-[#F1F5F9] text-[#475569]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#64748B]"></span>
+                  Inativo
+                </span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-label-md text-label-md whitespace-nowrap">11/11/2023</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1" onclick="event.stopPropagation()">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" onclick="openEditModalFromRow('row-6')" title="Editar cadastro" type="button">
+<span class="material-symbols-outlined text-[19px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- ESTADO VAZIO (Alternável via botão ou busca sem resultados) -->
+<div class="hidden flex-col items-center justify-center p-space-xl text-center" id="emptyStateView">
+<div class="w-20 h-20 rounded-full bg-surface-container-low flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[42px]">person_search</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs font-semibold">Nenhuma pessoa encontrada</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-space-lg">
+          Não identificamos beneficiários ou famílias que correspondam aos filtros ou ao termo de busca informado.
+        </p>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 bg-primary-container text-on-primary rounded-lg font-label-md text-label-md hover:bg-primary transition-colors flex items-center gap-1.5 shadow-sm" onclick="resetAllFilters()" type="button">
+<span class="material-symbols-outlined text-[18px]">filter_alt_off</span>
+<span class="">Limpar Todos os Filtros</span>
+</button>
+<button class="px-space-md py-2 bg-surface-container-low text-primary rounded-lg font-label-md text-label-md hover:bg-surface-container transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span class="">Cadastrar Novo Beneficiário</span>
+</button>
+</div>
+</div>
+<!-- 4. PAGINAÇÃO NO RODAPÉ DA TABELA -->
+<div class="p-space-md bg-surface-container-low/50 flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<span class="font-label-md text-label-md text-on-surface-variant">
+          Mostrando <strong class="text-on-surface font-semibold">1 a 6</strong> de <strong class="text-on-surface font-semibold">84</strong> registros
+        </span>
+<div class="flex items-center gap-1">
+<!-- Botão Anterior -->
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md text-outline hover:text-on-surface hover:bg-surface-container disabled:opacity-50 transition-colors flex items-center gap-1" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+<span class="hidden sm:inline">Anterior</span>
+</button>
+<!-- Números de Página -->
+<button class="w-8 h-8 rounded-lg font-label-md text-label-md bg-primary-container text-on-primary font-semibold shadow-xs" type="button">1</button>
+<button class="w-8 h-8 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" type="button">2</button>
+<button class="w-8 h-8 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" type="button">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="w-8 h-8 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" type="button">9</button>
+<!-- Botão Próximo -->
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1" type="button">
+<span class="hidden sm:inline">Próximo</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 5. PAINEL LATERAL / DRAWER DE DETALHES -->
+<!-- Backdrop suave -->
+<div class="fixed inset-0 z-40 bg-on-surface/30 backdrop-blur-xs transition-opacity duration-300" id="drawerBackdrop" onclick="closeDrawer()"></div>
+<!-- Drawer Container -->
+<aside class="fixed top-0 right-0 bottom-0 z-50 w-full max-w-xl bg-surface-container-lowest shadow-2xl flex flex-col transition-transform duration-300 transform overflow-hidden translate-x-0" id="detailsDrawer">
+<!-- Cabeçalho do Drawer -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">assignment_ind</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Ficha Individual do Beneficiário</span>
+</div>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center transition-colors" onclick="closeDrawer()" title="Fechar painel de detalhes (Esc)" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="mt-1 flex flex-col">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold" id="drawerBeneficiaryName">Lucas Gabriel Martins Ribeiro</h2>
+<div class="flex items-center gap-2 mt-1 flex-wrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-[#ECFDF5] text-[#065F46]" id="drawerStatusBadge"><span class="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span> Ativo</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-surface-container text-on-secondary-container" id="drawerAgeBadge"><span class="material-symbols-outlined text-[13px]">child_care</span> Menor de idade (14 anos)</span>
+</div>
+</div>
+</div>
+<!-- Conteúdo com Scroll Interno do Drawer -->
+<div class="flex-1 overflow-y-auto p-space-lg flex flex-col gap-space-lg"><section class="flex flex-col gap-space-xs"><div class="flex items-center gap-1.5 pb-1 text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">person</span><h3 class="font-headline-sm text-headline-sm font-semibold">Dados Básicos</h3></div><div class="grid grid-cols-2 gap-space-sm bg-surface-container-low/50 p-space-md rounded-xl"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">CPF</span><span class="font-body-md text-body-md text-on-surface font-medium" id="drawerCpf">452.889.108-12</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Nascimento</span><span class="font-body-md text-body-md text-on-surface font-medium" id="drawerBirth">12/03/1998</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Telefone</span><span class="font-body-md text-body-md text-on-surface font-medium" id="drawerPhone">(11) 98765-4321</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">E-mail</span><span class="font-body-md text-body-md text-on-surface font-medium truncate" id="drawerEmail">lucas.martins@email.com</span></div><div class="col-span-2 flex flex-col pt-1"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Endereço</span><span class="font-body-md text-body-md text-on-surface truncate" id="drawerAddress">Rua das Acácias Amarelas, nº 142, Bloco B - Apt 23 • Vila Nova Esperança</span></div></div></section><section class="flex flex-col gap-space-xs"><div class="flex items-center justify-between pb-1"><div class="flex items-center gap-1.5 text-on-surface"><span class="material-symbols-outlined text-secondary text-[18px]">family_restroom</span><h3 class="font-headline-sm text-headline-sm font-semibold">Responsável Legal</h3></div></div><div class="bg-surface-container-low/50 p-space-md rounded-xl flex flex-col gap-1"><div class="flex items-center justify-between"><span class="font-headline-sm text-body-md text-on-surface font-semibold">Clara Martins de Souza Ribeiro</span><span class="font-label-sm text-label-sm text-on-surface-variant">Mãe / Guardiã Legal</span></div><div class="flex items-center gap-space-md text-on-surface-variant font-label-md text-label-md pt-1"><span class="flex items-center gap-1 text-on-surface"><span class="material-symbols-outlined text-[16px] text-outline">call</span>(11) 97123-8899</span><span class="text-outline">•</span><span class="flex items-center gap-1 text-on-surface"><span class="material-symbols-outlined text-[16px] text-outline">badge</span>318.421.905-44</span></div></div></section><section class="flex flex-col gap-space-xs"><div class="flex items-center justify-between pb-1"><div class="flex items-center gap-1.5 text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">local_activity</span><h3 class="font-headline-sm text-headline-sm font-semibold">Serviço Vinculado</h3></div></div><div class="bg-surface-container-low/50 p-space-md rounded-xl flex items-center justify-between gap-space-md"><div class="flex flex-col min-w-0"><span class="font-headline-sm text-body-md text-on-surface font-semibold truncate" id="drawerService">Oficinas Culturais (Teatro)</span></div><span class="inline-flex items-center px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold bg-[#ECFDF5] text-[#065F46] shrink-0">Frequente</span></div></section><section class="flex flex-col gap-space-xs"></section></div>
+<!-- Rodapé com Ações do Drawer -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-end gap-space-sm">
+<button class="px-space-md h-10 bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors rounded-lg font-label-md text-label-md shadow-xs" onclick="closeDrawer()" type="button">
+          Fechar
+        </button>
+<button class="px-space-md h-10 bg-surface-container text-primary hover:bg-surface-container-high transition-colors rounded-lg font-label-md text-label-md flex items-center gap-1.5 font-semibold" onclick="editFromDrawer()" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+<span class="">Editar Cadastro</span>
+</button>
+</div>
+</aside>
+<!-- 6. MODAL ELEGANTE DE EDIÇÃO RÁPIDA DE BENEFICIÁRIO -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/40 backdrop-blur-xs transition-opacity duration-300 hidden opacity-0" id="editModalBackdrop" onclick="handleBackdropClick(event)">
+<div aria-labelledby="modalEditTitle" aria-modal="true" class="w-full max-w-2xl bg-surface-container-lowest rounded-2xl shadow-2xl border border-surface-container-high flex flex-col max-h-[92vh] overflow-hidden transform scale-95 transition-transform duration-300" id="editModalDialog" role="dialog">
+<!-- Cabeçalho do Modal -->
+<div class="px-6 py-4 bg-surface-container-low flex items-center justify-between border-b border-surface-container">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-xs">
+<span class="material-symbols-outlined text-[22px]">manage_accounts</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-sm text-on-surface font-bold" id="modalEditTitle">Editar Cadastro</h2>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-[11px] font-semibold bg-[#ECFDF5] text-[#065F46]" id="modalStatusBadge">
+<span class="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span> Ativo
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium" id="modalSubName">Lucas Gabriel Martins Ribeiro</p>
+</div>
+</div>
+<button class="w-9 h-9 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center transition-colors focus:outline-none" onclick="closeEditModal()" title="Fechar modal (Esc)" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Formulário de Edição -->
+<form class="flex-1 overflow-y-auto px-6 py-5 flex flex-col gap-5" id="editUserForm" onsubmit="saveUserChanges(event)">
+<input id="editTargetRowId" type="hidden" value="row-1">
+<!-- Seção: Identificação e Contato -->
+<div>
+<div class="flex items-center gap-1.5 mb-3 text-primary">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+<span class="font-label-md text-label-md font-bold uppercase tracking-wider">Identificação do Beneficiário</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Nome Completo -->
+<div class="sm:col-span-2 flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold" for="editFullName">Nome Completo <span class="text-error">*</span></label>
+<input class="w-full h-10 px-3 bg-surface-container-low text-on-surface rounded-lg font-body-md text-body-md border border-outline-variant/60 focus:bg-surface-container-lowest focus:border-primary focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all" id="editFullName" name="fullName" required="" type="text" value="Lucas Gabriel Martins Ribeiro">
+</div>
+<!-- CPF -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold" for="editCpf">CPF <span class="text-error">*</span></label>
+<input class="w-full h-10 px-3 bg-surface-container-low text-on-surface rounded-lg font-body-md text-body-md border border-outline-variant/60 focus:bg-surface-container-lowest focus:border-primary focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all" id="editCpf" name="cpf" required="" type="text" value="452.889.108-12">
+</div>
+<!-- Data de Nascimento -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold" for="editBirthDate">Data de Nascimento</label>
+<input class="w-full h-10 px-3 bg-surface-container-low text-on-surface rounded-lg font-body-md text-body-md border border-outline-variant/60 focus:bg-surface-container-lowest focus:border-primary focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all" id="editBirthDate" name="birthDate" placeholder="DD/MM/AAAA" type="text" value="12/03/1998">
+</div>
+<!-- Telefone -->
+<div class="sm:col-span-2 flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold" for="editPhone">Telefone / WhatsApp</label>
+<input class="w-full h-10 px-3 bg-surface-container-low text-on-surface rounded-lg font-body-md text-body-md border border-outline-variant/60 focus:bg-surface-container-lowest focus:border-primary focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all" id="editPhone" name="phone" type="text" value="(11) 98765-4321">
+</div>
+</div>
+</div>
+<div class="border-t border-surface-container-high"></div>
+<!-- Seção: Vínculo e Status -->
+<div>
+<div class="flex items-center gap-1.5 mb-3 text-primary">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+<span class="font-label-md text-label-md font-bold uppercase tracking-wider">Vínculo Institucional &amp; Status</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Serviço Vinculado -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold" for="editService">Serviço Vinculado</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface-container-low text-on-surface rounded-lg font-body-md text-body-md border border-outline-variant/60 focus:bg-surface-container-lowest focus:border-primary focus:outline-none focus:ring-2 focus:ring-secondary-container appearance-none transition-all cursor-pointer" id="editService" name="service">
+<option value="Oficinas Culturais (Teatro)">Oficinas Culturais (Teatro)</option>
+<option value="Cestas Básicas &amp; Apoio">Cestas Básicas &amp; Apoio</option>
+<option value="Capacitação Profissional">Capacitação Profissional</option>
+<option value="Apoio Psicossocial">Apoio Psicossocial</option>
+<option value="Distribuição de Cestas">Distribuição de Cestas</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Status -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold" for="editStatus">Status do Cadastro</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface-container-low text-on-surface rounded-lg font-body-md text-body-md border border-outline-variant/60 focus:bg-surface-container-lowest focus:border-primary focus:outline-none focus:ring-2 focus:ring-secondary-container appearance-none transition-all cursor-pointer" id="editStatus" name="status" onchange="syncModalBadge(this.value)">
+<option value="Ativo">● Ativo</option>
+<option value="Pendente">● Pendente</option>
+<option value="Suspenso">● Suspenso</option>
+<option value="Desligado">● Desligado</option>
+<option value="Inativo">● Inativo</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Observações / Notas da Assistência Social -->
+<div class="sm:col-span-2 flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold" for="editNotes">Observações / Notas da Assistência Social</label>
+<textarea class="w-full p-3 bg-surface-container-low text-on-surface rounded-lg font-body-md text-body-md border border-outline-variant/60 focus:bg-surface-container-lowest focus:border-primary focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all resize-none" id="editNotes" name="notes" placeholder="Adicione observações, relatórios de visitas ou parecer técnico..." rows="3"></textarea>
+</div>
+</div>
+</div>
+</form>
+<!-- Rodapé de Ações do Modal -->
+<div class="px-6 py-4 bg-surface-container-low flex items-center justify-between border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+        Alterações registradas no histórico do usuário
+      </span>
+<div class="flex items-center gap-2">
+<button class="px-4 h-10 bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors rounded-lg font-label-md text-label-md shadow-xs" onclick="closeEditModal()" type="button">
+          Cancelar
+        </button>
+<button class="px-5 h-10 bg-primary-container text-on-primary hover:bg-primary transition-colors rounded-lg font-label-md text-label-md flex items-center gap-1.5 shadow-sm font-semibold" form="editUserForm" type="submit">
+<span class="material-symbols-outlined text-[18px]">save</span>
+          Salvar Alterações
+        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- TOAST DE NOTIFICAÇÃO DE SUCESSO -->
+<div class="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-4 py-3 bg-[#065F46] text-[#ECFDF5] rounded-xl shadow-xl transition-all duration-300 transform translate-y-16 opacity-0 pointer-events-none" id="toastSuccess">
+<div class="w-7 h-7 rounded-full bg-[#10B981] text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold leading-tight" id="toastTitle">Alterações salvas com sucesso!</span>
+<span class="font-body-sm text-[12px] opacity-90 leading-tight" id="toastMessage">O cadastro do beneficiário foi atualizado na base.</span>
+</div>
+<button class="ml-2 text-[#ECFDF5]/80 hover:text-[#ECFDF5] transition-colors" onclick="hideToast()" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Controle do Drawer
+  let currentOpenRowId = null;
+
+  function openDrawer(name, age, cpf, phone, status, protocol) {
+    const drawer = document.getElementById('detailsDrawer');
+    const backdrop = document.getElementById('drawerBackdrop');
+
+    if (name) document.getElementById('drawerBeneficiaryName').textContent = name;
+    if (cpf) document.getElementById('drawerCpf').textContent = cpf;
+    if (phone) document.getElementById('drawerPhone').textContent = phone;
+
+    const isMinor = age && (age.includes('14') || age.includes('16') || parseInt(age) < 18);
+    const ageBadge = document.getElementById('drawerAgeBadge');
+    if (ageBadge) {
+      if (isMinor) {
+        ageBadge.innerHTML = `<span class="material-symbols-outlined text-[13px]">child_care</span> Menor de idade (${age})`;
+        ageBadge.classList.remove('hidden');
+      } else {
+        ageBadge.innerHTML = `<span class="material-symbols-outlined text-[13px]">person</span> Maior de idade (${age})`;
+      }
+    }
+
+    const statusBadge = document.getElementById('drawerStatusBadge');
+    if (statusBadge && status) {
+      applyBadgeStyle(statusBadge, status);
+    }
+
+    drawer.classList.remove('translate-x-full');
+    drawer.classList.add('translate-x-0');
+    backdrop.classList.remove('hidden');
+    backdrop.classList.remove('pointer-events-none');
+  }
+
+  function closeDrawer() {
+    const drawer = document.getElementById('detailsDrawer');
+    const backdrop = document.getElementById('drawerBackdrop');
+    drawer.classList.add('translate-x-full');
+    drawer.classList.remove('translate-x-0');
+    backdrop.classList.add('hidden');
+    backdrop.classList.add('pointer-events-none');
+  }
+
+  function editFromDrawer() {
+    closeDrawer();
+    const currentName = document.getElementById('drawerBeneficiaryName').textContent;
+    // Encontra a linha correspondente pelo nome
+    const rows = document.querySelectorAll('#tableBody tr');
+    let matchedRowId = 'row-1';
+    rows.forEach(r => {
+      if (r.dataset.name === currentName) matchedRowId = r.id;
+    });
+    openEditModalFromRow(matchedRowId);
+  }
+
+  // MODAL DE EDIÇÃO RÁPIDA
+  function openEditModalFromRow(rowId) {
+    const row = document.getElementById(rowId);
+    if (!row) return;
+
+    currentOpenRowId = rowId;
+    document.getElementById('editTargetRowId').value = rowId;
+
+    const name = row.dataset.name || '';
+    const cpf = row.dataset.cpf || '';
+    const phone = row.dataset.phone || '';
+    const birth = row.dataset.birth || '12/03/1998';
+    const service = row.dataset.service || 'Oficinas Culturais (Teatro)';
+    const status = row.dataset.status || 'Ativo';
+    const notes = row.dataset.notes || '';
+
+    // Popula o formulário
+    document.getElementById('editFullName').value = name;
+    document.getElementById('editCpf').value = cpf;
+    document.getElementById('editPhone').value = phone;
+    document.getElementById('editBirthDate').value = birth;
+    document.getElementById('editNotes').value = notes;
+    document.getElementById('modalSubName').textContent = name;
+
+    // Seleciona o Serviço
+    const serviceSelect = document.getElementById('editService');
+    for (let opt of serviceSelect.options) {
+      if (opt.value === service || service.includes(opt.value)) {
+        serviceSelect.value = opt.value;
+        break;
+      }
+    }
+
+    // Seleciona o Status
+    const statusSelect = document.getElementById('editStatus');
+    statusSelect.value = status;
+    syncModalBadge(status);
+
+    // Abre o Modal com Animação
+    const modalBackdrop = document.getElementById('editModalBackdrop');
+    const modalDialog = document.getElementById('editModalDialog');
+
+    modalBackdrop.classList.remove('hidden');
+    // timeout para trigger de transição CSS
+    setTimeout(() => {
+      modalBackdrop.classList.remove('opacity-0');
+      modalDialog.classList.remove('scale-95');
+      modalDialog.classList.add('scale-100');
+    }, 10);
+  }
+
+  function closeEditModal() {
+    const modalBackdrop = document.getElementById('editModalBackdrop');
+    const modalDialog = document.getElementById('editModalDialog');
+
+    modalBackdrop.classList.add('opacity-0');
+    modalDialog.classList.remove('scale-100');
+    modalDialog.classList.add('scale-95');
+
+    setTimeout(() => {
+      modalBackdrop.classList.add('hidden');
+    }, 250);
+  }
+
+  function handleBackdropClick(event) {
+    if (event.target.id === 'editModalBackdrop') {
+      closeEditModal();
+    }
+  }
+
+  function syncModalBadge(status) {
+    const badge = document.getElementById('modalStatusBadge');
+    applyBadgeStyle(badge, status);
+  }
+
+  function applyBadgeStyle(element, status) {
+    if (!element) return;
+    if (status === 'Ativo') {
+      element.className = 'inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-[#ECFDF5] text-[#065F46]';
+      element.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span> Ativo';
+    } else if (status === 'Pendente') {
+      element.className = 'inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-[#FEF3C7] text-[#92400E]';
+      element.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-[#F59E0B]"></span> Pendente';
+    } else if (status === 'Suspenso') {
+      element.className = 'inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-[#FFF7ED] text-[#C2410C]';
+      element.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-[#F97316]"></span> Suspenso';
+    } else if (status === 'Desligado') {
+      element.className = 'inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-[#FEF2F2] text-[#B91C1C]';
+      element.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-[#EF4444]"></span> Desligado';
+    } else {
+      element.className = 'inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-[#F1F5F9] text-[#475569]';
+      element.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-[#64748B]"></span> Inativo';
+    }
+  }
+
+  function saveUserChanges(event) {
+    event.preventDefault();
+    const rowId = document.getElementById('editTargetRowId').value;
+    const row = document.getElementById(rowId);
+    if (!row) return;
+
+    const newName = document.getElementById('editFullName').value.trim();
+    const newCpf = document.getElementById('editCpf').value.trim();
+    const newPhone = document.getElementById('editPhone').value.trim();
+    const newBirth = document.getElementById('editBirthDate').value.trim();
+    const newService = document.getElementById('editService').value;
+    const newStatus = document.getElementById('editStatus').value;
+    const newNotes = document.getElementById('editNotes').value.trim();
+
+    // Atualiza os data attributes da linha
+    row.dataset.name = newName;
+    row.dataset.cpf = newCpf;
+    row.dataset.phone = newPhone;
+    row.dataset.birth = newBirth;
+    row.dataset.service = newService;
+    row.dataset.status = newStatus;
+    row.dataset.notes = newNotes;
+
+    // Atualiza a visualização na linha da tabela
+    const nameEl = row.querySelector('.person-name');
+    if (nameEl) nameEl.textContent = newName;
+
+    const cpfEl = row.querySelector('.person-cpf');
+    if (cpfEl) cpfEl.textContent = newCpf;
+
+    const phoneEl = row.querySelector('.person-phone');
+    if (phoneEl) phoneEl.textContent = newPhone;
+
+    const serviceEl = row.querySelector('.person-service');
+    if (serviceEl) serviceEl.textContent = newService;
+
+    const statusCell = row.querySelector('.person-status-cell');
+    if (statusCell) {
+      statusCell.innerHTML = '';
+      const newBadge = document.createElement('span');
+      applyBadgeStyle(newBadge, newStatus);
+      statusCell.appendChild(newBadge);
+    }
+
+    // Atualiza avatar com as novas iniciais
+    const initials = newName.split(' ').map(n => n[0]).filter(Boolean).slice(0, 2).join('').toUpperCase();
+    const avatarEl = row.querySelector('.avatar-badge');
+    if (avatarEl && initials) avatarEl.textContent = initials;
+
+    // Atualiza drawer caso seja o mesmo que estava aberto
+    const drawerName = document.getElementById('drawerBeneficiaryName');
+    if (drawerName) drawerName.textContent = newName;
+    const drawerCpf = document.getElementById('drawerCpf');
+    if (drawerCpf) drawerCpf.textContent = newCpf;
+    const drawerPhone = document.getElementById('drawerPhone');
+    if (drawerPhone) drawerPhone.textContent = newPhone;
+    const drawerService = document.getElementById('drawerService');
+    if (drawerService) drawerService.textContent = newService;
+    const drawerNotes = document.getElementById('drawerNotes');
+    if (drawerNotes && newNotes) drawerNotes.textContent = newNotes;
+
+    // Fecha o Modal
+    closeEditModal();
+
+    // Feedback Toast de Sucesso
+    showToast('Alterações salvas com sucesso!', `O cadastro de ${newName} foi atualizado com sucesso.`);
+  }
+
+  let toastTimer = null;
+  function showToast(title, msg) {
+    const toast = document.getElementById('toastSuccess');
+    if (title) document.getElementById('toastTitle').textContent = title;
+    if (msg) document.getElementById('toastMessage').textContent = msg;
+
+    toast.classList.remove('translate-y-16', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      hideToast();
+    }, 4000);
+  }
+
+  function hideToast() {
+    const toast = document.getElementById('toastSuccess');
+    toast.classList.remove('translate-y-0', 'opacity-100');
+    toast.classList.add('translate-y-16', 'opacity-0', 'pointer-events-none');
+  }
+
+  // Atalho de Teclado: Escape fecha drawer ou modal
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      const modalBackdrop = document.getElementById('editModalBackdrop');
+      if (!modalBackdrop.classList.contains('hidden')) {
+        closeEditModal();
+      } else {
+        closeDrawer();
+      }
+    }
+  });
+
+  // Toggle interativo do Empty State
+  let isEmptyStateActive = false;
+  function toggleEmptyState() {
+    isEmptyStateActive = !isEmptyStateActive;
+    const tableView = document.getElementById('tableView');
+    const emptyStateView = document.getElementById('emptyStateView');
+    const toggleLabel = document.getElementById('toggleEmptyLabel');
+    const counter = document.getElementById('resultsCounter');
+
+    if (isEmptyStateActive) {
+      tableView.classList.add('hidden');
+      emptyStateView.classList.remove('hidden');
+      emptyStateView.classList.add('flex');
+      toggleLabel.textContent = 'Voltar para Tabela Normal';
+      counter.textContent = '0 pessoas encontradas';
+    } else {
+      tableView.classList.remove('hidden');
+      emptyStateView.classList.add('hidden');
+      emptyStateView.classList.remove('flex');
+      toggleLabel.textContent = 'Simular Busca Vazia';
+      counter.textContent = '84 pessoas cadastradas';
+    }
+  }
+
+  function resetAllFilters() {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('statusFilter').value = '';
+    document.getElementById('serviceFilter').value = '';
+    document.getElementById('clearSearchBtn').classList.add('hidden');
+    if (isEmptyStateActive) {
+      toggleEmptyState();
+    }
+  }
+
+  // Monitor de digitação para botão de limpar busca
+  const searchInput = document.getElementById('searchInput');
+  const clearSearchBtn = document.getElementById('clearSearchBtn');
+  const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+
+  if (searchInput && clearSearchBtn) {
+    searchInput.addEventListener('input', function() {
+      if (this.value.trim().length > 0) {
+        clearSearchBtn.classList.remove('hidden');
+      } else {
+        clearSearchBtn.classList.add('hidden');
+      }
+    });
+
+    clearSearchBtn.addEventListener('click', function() {
+      searchInput.value = '';
+      clearSearchBtn.classList.add('hidden');
+      searchInput.focus();
+    });
+  }
+
+  if (resetFiltersBtn) {
+    resetFiltersBtn.addEventListener('click', resetAllFilters);
+  }
+</script><script>
+  (function() {
+    const btn = document.getElementById('userMenuButton');
+    const dropdown = document.getElementById('userMenuDropdown');
+    const chevron = document.getElementById('userMenuChevron');
+    const container = document.getElementById('userMenuContainer');
+
+    if (!btn || !dropdown || !container) return;
+
+    function toggleDropdown() {
+      const isHidden = dropdown.classList.contains('hidden');
+      if (isHidden) {
+        dropdown.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+        if (chevron) chevron.classList.add('rotate-180');
+      } else {
+        dropdown.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        if (chevron) chevron.classList.remove('rotate-180');
+      }
+    }
+
+    function closeDropdown() {
+      dropdown.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+      if (chevron) chevron.classList.remove('rotate-180');
+    }
+
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleDropdown();
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!container.contains(e.target)) {
+        closeDropdown();
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeDropdown();
+      }
+    });
+  })();
+</script></main><footer class="w-full bg-surface-container-low py-space-lg shadow-[0_-1px_8px_rgba(0,0,0,0.03)]"><div class="max-w-7xl mx-auto px-margin-desktop flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant"><span class="font-label-sm text-label-sm">Portal Institucional • Ação Social Viva © 2024</span><span class="font-label-sm text-label-sm">Ambiente Seguro de Gestão Social</span></div></footer>
+
+
+<script src="/js/navegacao.js" defer></script><script src="/js/acesso.js" defer></script><script src="/js/interface.js"></script></body></html>

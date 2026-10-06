@@ -32,7 +32,7 @@ class ServicoRepositoryTest {
 
         // Act: executa as consultas derivadas solicitadas.
         var ativos = repository.findByAtivoTrue();
-        var educacao = repository.findByCategoria("Educacao");
+        var educacao = repository.findByCategoriaIgnoreCase("educacao");
 
         // Assert: somente os registros que atendem aos filtros sao retornados.
         assertThat(ativos).extracting(Servico::getNome).containsExactlyInAnyOrder("Oficina", "Esporte");

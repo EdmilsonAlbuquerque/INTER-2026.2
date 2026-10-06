@@ -18,6 +18,26 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
+    @ExceptionHandler(org.springframework.web.multipart.MaxUploadSizeExceededException.class)
+    public ResponseEntity<StandardError> tratarTamanhoFoto(Exception exception, HttpServletRequest request) {
+        return criarResposta(HttpStatus.PAYLOAD_TOO_LARGE, "A foto deve ter até 5 MB.", request.getRequestURI());
+    }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<StandardError> tratarArgumento(IllegalArgumentException exception, HttpServletRequest request) {
+        return criarResposta(HttpStatus.BAD_REQUEST, exception.getMessage(), request.getRequestURI());
+    }
+
+    @ExceptionHandler(org.springframework.dao.DataIntegrityViolationException.class)
+    public ResponseEntity<StandardError> tratarDuplicidade(Exception exception, HttpServletRequest request) {
+        return criarResposta(HttpStatus.CONFLICT, "Dados duplicados ou vinculados a outros registros.", request.getRequestURI());
+    }
+
+    @ExceptionHandler(org.springframework.web.servlet.resource.NoResourceFoundException.class)
+    public ResponseEntity<StandardError> tratarRota(Exception exception, HttpServletRequest request) {
+        return criarResposta(HttpStatus.NOT_FOUND, "Página não encontrada.", request.getRequestURI());
+    }
+
     /** Trata recursos que nao foram encontrados e responde com HTTP 404. */
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<StandardError> tratarNaoEncontrado(
