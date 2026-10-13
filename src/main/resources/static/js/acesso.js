@@ -13,7 +13,9 @@ window.acesso = (() => {
         if (!response.ok) {
             if (response.status === 401) location.assign('/login?expirou');
             const details = data.errors ? Object.values(data.errors).join(' ') : '';
-            throw new Error(details || data.message || 'Não foi possível concluir a operação.');
+            const error = new Error(details || data.message || 'Não foi possível concluir a operação.');
+            error.errors = data.errors;
+            throw error;
         }
         return data;
     }
@@ -22,6 +24,7 @@ window.acesso = (() => {
         if (!box) {
             box = document.createElement('p'); box.dataset.feedback = '';
             box.setAttribute('role', 'status'); box.setAttribute('aria-live', 'polite');
+            box.setAttribute('aria-atomic', 'true');
             form.prepend(box);
         }
         box.className = `text-sm p-3 rounded-lg ${error ? 'bg-red-50 text-red-700' : 'bg-blue-50 text-blue-900'}`;
@@ -36,7 +39,10 @@ window.acesso = (() => {
             if (button?.disabled) return;
             if (button) button.disabled = true;
             try { await handler(new FormData(form)); }
-            catch (error) { message(form, error.message, true); }
+            catch (error) {
+                message(form, error.message, true);
+                window.formularios?.serverErrors(form, error.errors);
+            }
             finally { if (button) button.disabled = false; }
         });
     }

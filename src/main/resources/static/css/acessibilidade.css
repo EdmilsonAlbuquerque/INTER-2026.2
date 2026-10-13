@@ -1,0 +1,137 @@
+/* Navegação por teclado em todas as telas. */
+.skip-link {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 10000;
+    padding: 12px 20px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    background: #0f172a;
+    color: #fff;
+    font: 600 1rem/1.5 sans-serif;
+    text-decoration: underline;
+    transform: translateY(calc(-100% - 24px));
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+:is(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+    outline: 3px solid #1d4ed8 !important;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px #fff !important;
+}
+
+main[tabindex="-1"]:focus {
+    outline: none;
+}
+
+.campo-ajuda, .campo-erro {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+.campo-ajuda { color: #475569; }
+.campo-erro { color: #991b1b; font-weight: 600; }
+[aria-invalid="true"] { border: 2px solid #991b1b !important; }
+
+.ia-sugestao {
+    margin-top: 12px;
+    padding: 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #f8fafc;
+}
+.ia-sugestao button { margin-top: 8px; text-decoration: underline; }
+
+/* Controles de leitura com texto legível e área confortável para clicar. */
+.acessibilidade-abrir {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 1000;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    padding: 12px 18px;
+    min-height: 48px;
+    background: #0f172a;
+    color: #fff;
+    font: 600 18px/1.5 sans-serif;
+    box-shadow: 0 2px 12px rgb(0 0 0 / .3);
+}
+dialog.acessibilidade-painel {
+    width: min(440px, calc(100% - 32px));
+    max-height: calc(100dvh - 32px);
+    overflow-y: auto;
+    margin: auto;
+    padding: 24px;
+    border: 2px solid #334155;
+    border-radius: 16px;
+    background: #fff;
+    color: #0f172a;
+    font: 18px/1.6 sans-serif;
+}
+.acessibilidade-painel::backdrop { background: rgb(0 0 0 / .65); }
+.acessibilidade-painel h2 { font: 700 24px/1.4 sans-serif; margin-bottom: 12px; }
+.acessibilidade-painel p { margin: 12px 0; }
+.acessibilidade-painel button {
+    min-height: 48px;
+    padding: 10px 16px;
+    border: 2px solid #334155;
+    border-radius: 8px;
+    background: #f1f5f9;
+    color: #0f172a;
+    font: 600 18px/1.5 sans-serif;
+    cursor: pointer;
+}
+.acessibilidade-painel button[aria-pressed="true"] { background: #0f172a; color: #fff; }
+.acessibilidade-painel button:disabled { opacity: .5; cursor: default; }
+.acessibilidade-tamanho, .acessibilidade-acoes { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+
+/* Permite crescer sem prender a leitura à altura fixa das telas de autenticação. */
+html[data-text-scale]:not([data-text-scale="100"]) body {
+    height: auto !important;
+    overflow-y: auto !important;
+}
+html[data-text-scale]:not([data-text-scale="100"]) main { height: auto !important; }
+html[data-text-scale]:not([data-text-scale="100"]) :is(input:not([type="checkbox"]):not([type="radio"]), select, button) {
+    min-height: 44px;
+    height: auto !important;
+}
+
+/* Paleta de alto contraste, preservando fotos e gráficos originais. */
+html[data-contrast="alto"] { color-scheme: dark; background: #000; }
+html[data-contrast="alto"] body,
+html[data-contrast="alto"] body *:not(img):not(svg):not(svg *) {
+    background-color: #000 !important;
+    background-image: none !important;
+    color: #fff !important;
+    border-color: #fff !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+html[data-contrast="alto"] body :is(a, a *) { color: #ffeb3b !important; text-decoration: underline !important; }
+html[data-contrast="alto"] body :is(button, input, select, textarea) { border: 2px solid #fff !important; }
+html[data-contrast="alto"] body input::placeholder,
+html[data-contrast="alto"] body textarea::placeholder { color: #ddd !important; opacity: 1; }
+html[data-contrast="alto"] body :focus-visible { outline-color: #ffeb3b !important; }
+html[data-contrast="alto"] body [aria-invalid="true"] { border: 3px dashed #ffeb3b !important; }
+html[data-contrast="alto"] body button[aria-pressed="true"] { border: 3px solid #ffeb3b !important; }
+html[data-contrast="alto"] body *::before,
+html[data-contrast="alto"] body *::after { background-image: none !important; }
+
+[data-faixa-etaria] { background: transparent; }
+[data-faixa-etaria][aria-pressed="true"] { background: #1e40af; color: #fff; font-weight: 700; }
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto !important; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

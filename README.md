@@ -173,3 +173,38 @@ cadastro por convite, revogação de sessão, último administrador, troca de se
 cookie de lembrar dispositivo e páginas institucionais públicas. A validação
 no navegador usa uma instância temporária com banco em memória na porta 8081;
 encerre-a ao terminar para manter livre a execução pela IDE.
+
+## Acessibilidade
+
+As telas da aplicação incluem um link "Pular para o conteúdo" como primeiro
+atalho de teclado e um contorno visível nos controles ao navegar com Tab.
+As animações e transições são reduzidas quando essa preferência está ativada
+no sistema operacional. O botão de mostrar senha informa seu estado aos
+leitores de tela, e as mensagens dos formulários são anunciadas por inteiro.
+
+Para conferir no navegador:
+
+1. Abra uma tela e pressione Tab: o link de pular conteúdo deve aparecer.
+2. Pressione Enter: o foco deve ir para o conteúdo principal; pressione Tab
+   novamente para continuar nos controles dessa área.
+3. Navegue com Tab e Shift+Tab e confira o contorno nos links e campos.
+4. No login, ative "Mostrar senha" com Espaço e confira o estado com um
+   leitor de tela. Confira também o anúncio de um erro de autenticação.
+5. Ative a preferência de reduzir movimento no sistema e recarregue a tela.
+
+Essas melhorias são uma base de acessibilidade; não representam uma auditoria
+completa de contraste, formulários, tabelas ou compatibilidade com leitores de tela.
+
+Os formulários também mostram erros junto aos campos, preservam instruções
+para leitores de tela e direcionam o foco ao primeiro problema. O cadastro de
+serviços oferece uma sugestão experimental de categoria usando Naive Bayes,
+executado no navegador com exemplos fictícios e aplicação explícita pelo usuário.
+
+Veja a explicação, os exemplos para apresentação e os comandos de teste em
+[Acessibilidade e IA](docs/ACESSIBILIDADE-E-IA.md).
+
+Todas as telas também oferecem o botão **Acessibilidade** para aumentar o
+texto até 150%, ativar alto contraste e restaurar o padrão. As preferências
+ficam salvas no navegador. As imagens dos formulários de acesso são locais.
+Os filtros do gerenciamento funcionam sobre as seis linhas de demonstração,
+com contagem coerente, busca por nome/CPF, status, serviço e faixa etária.
